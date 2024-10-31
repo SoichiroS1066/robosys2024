@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xv
 # SPDX-FileCopyrightText: 2024 Soichiro Suzuki 　　　　　
 # SPDX-License-Identifier: BSD-3-Clause
 
@@ -7,16 +7,20 @@ ng () {
     res=1
 }
 
-res=0
+res=0    
 
-## a=山田
-## [ "$a" = 上田 ] || ng "$LINENO"  # LINENOは，この行の行番号の入る変数
-
-## [ "$a" = 山田 ] || ng "$LINENO"  # ngに第一引数として$LINENOを付与
-
+### 通常の入力 ###
 out=$(seq 5 | ./plus)
 [ "${out}" = 15 ] || ng "$LINENO"
 
-[ "${res}" = 0 ] && echo OK #通ったのが（人間に）分かるように表示
-exit $res     # このシェルスクリプトの終了ステータスを返して終了
+### 誤った入力 ###
+out=$(echo あ | ./plus)           #計算できない値を入力
+[ "$?" = 1 ]      || ng "$LINENO" #終了ステータスが1になっていることを確認
+[ "${out}" = "" ] || ng "$LINENO" #この行と上の行を入れ替えるのはNG
 
+out=$(echo | ./plus)              #なにも入力しない
+[ "$?" = 1 ]      || ng "$LINENO" #これも異常終了する
+[ "${out}" = "" ] || ng "$LINENO"
+
+[ "$res" = 0 ] && echo OK
+exit $res
