@@ -5,7 +5,7 @@
 ![test](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test.yml/badge.svg)
 
 ## 機能
-- 標準入力から読み込んだ数字を足す。
+- 標準入力から読み込んだ数字の列を足す。
 
 ## 前準備
 - Ubuntu をインストールしていない場合はUbuntu をインストール  
@@ -22,8 +22,8 @@ $`cd ~/robosys2024`
 ## 使用例
 - 1~5 を足したい場合  
 $`seq 1 5 | ./plus` または $`seq 5 | ./plus`
-- 2~4 を足したい場合  
-$`seq 2 4 | ./plus`
+- 5~100 を足したい場合  
+$`seq 5 100 | ./plus`
 
 ## 必要なソフトウェア
 - Python  
