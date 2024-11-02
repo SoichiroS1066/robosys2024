@@ -13,15 +13,15 @@
 - Ubuntu 内にHitHub を入れていない場合は以下を入力しインストール
 '$ sudo apt install git'
 - GitHub からrobosys2024 のリポジトリをクローン
-'$ git clone https://github.com/SoichiroS1066/robosys2024'
+`$ git clone https://github.com/SoichiroS1066/robosys2024`
 
 ## 起動の手順
 - 前準備が済んでいる場合は次のコードを入力
-'$ cd ~/robosys2022'
+`$ cd ~/robosys2022`
 
 ## 使用例
 - 1~5を足したい場合
-　- 'seq 5 | ./plus'
+　`$ seq 5 | ./plus`
 
 ## 必要なソフトウェア
 - Python
