@@ -5,9 +5,23 @@
 ![test](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test.yml/badge.svg)
 ↑ テスト結果を反映したバッジの画像が埋め込まれる。（ryuichiueda等は各自変更を。）
 
-標準入力から読み込んだ数字を足す。
+## 機能
+- 標準入力から読み込んだ数字を足す。
 
-（ここに前ページの項目をいろいろ書く）
+## 前準備
+- Ubuntu をインストールしていない場合はUbuntu をインストール (テスト環境である24.04 LTS をオススメします)
+- Ubuntu 内にHitHub を入れていない場合は以下を入力しインストール
+'$ sudo apt install git'
+- GitHub からrobosys2024 のリポジトリをクローン
+'$ git clone https://github.com/SoichiroS1066/robosys2024'
+
+## 起動の手順
+- 前準備が済んでいる場合は次のコードを入力
+'$ cd ~/robosys2022'
+
+## 使用例
+- 1~5を足したい場合
+　- 'seq 5 | ./plus'
 
 ## 必要なソフトウェア
 - Python
