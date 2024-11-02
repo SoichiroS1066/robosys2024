@@ -11,7 +11,7 @@
 - Ubuntu をインストールしていない場合はUbuntu をインストール  
 ※ バージョンはテスト環境と同じ *Ubuntu 24.04 LTS* をオススメします
 - Ubuntu 内にGitHub を入れていない場合は以下を入力しインストール  
-$`sudo apt install git`  
+$`sudo apt install git`<br>
 <br>
 - GitHub からrobosys2024 のリポジトリをクローン  
 $`git clone https://github.com/SoichiroS1066/robosys2024`
