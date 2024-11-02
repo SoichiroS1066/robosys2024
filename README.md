@@ -11,19 +11,19 @@
 - Ubuntu をインストールしていない場合はUbuntu をインストール  
 ※ バージョンはテスト環境と同じ *Ubuntu 24.04 LTS* をオススメします
 - Ubuntu 内にGitHub を入れていない場合は以下を入力しインストール  
-`$ sudo apt install git`
+$`sudo apt install git`
 - GitHub からrobosys2024 のリポジトリをクローン  
-`$ git clone https://github.com/SoichiroS1066/robosys2024`
+$`git clone https://github.com/SoichiroS1066/robosys2024`
 
 ## 起動の手順
 - 前準備が済んでいる場合は次のコードを入力  
-`$ cd ~/robosys2024`
+$`cd ~/robosys2024`
 
 ## 使用例
 - 1~5 を足したい場合  
-`$ seq 1 5 | ./plus` または `$ seq 5 | ./plus`
+$`seq 1 5 | ./plus` または $`seq 5 | ./plus`
 - 2~4 を足したい場合  
-`$ seq 2 4 | ./plus`
+$`seq 2 4 | ./plus`
 
 ## 必要なソフトウェア
 - Python  
