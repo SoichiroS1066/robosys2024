@@ -2,7 +2,7 @@
 2024年 ロボットシステム学
 
 ## 使用技術
-![画像](https://qiita-user-contents.imgix.net/https%3A%2F%2Fimg.shields.io%2Fbadge%2F-Python-F2C63C.svg%3Flogo%3Dpython%26style%3Dfor-the-badge?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=5d7d909c2f70c6c8a0fc0477bd1a56ae)
+![アイコン](https://img.shields.io/badge/-Python-yellow.svg?logo=python&style=for-the-badge)
 
 ## *plusコマンド*
 ![test](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test.yml/badge.svg)
