@@ -1,4 +1,4 @@
-name: test        # ワークフローの名前
+name: test_math_operations        # ワークフローの名前
 
 on: push          # このワークフローを push イベントで実行
 
