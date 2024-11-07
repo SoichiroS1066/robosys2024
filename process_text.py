@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 # 標準入力から文字を読み込む
-input_text = input("何か文字列を入力してください: ")
+input_text = input("好きな文字列を入力してください(例：hello): ")
 
 # 入力された文字を大文字に変換
 processed_text = input_text.upper()
