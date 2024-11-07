@@ -6,7 +6,7 @@
 
 ## *math_operations*
 [![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-![test](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test_math_operations.yml/badge.svg)
+![IC](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test_math_operations.yml/badge.svg)
 
 ### 機能
 - 標準入力から読み込んだ数字を加算、減算、乗算、除算する
