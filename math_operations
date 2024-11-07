@@ -1,0 +1,48 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2024 Soichiro Suzuki
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+
+def calculate(numbers, operation):
+    if operation == "add":
+        return sum(numbers)
+    elif operation == "subtract":
+        result = numbers[0]
+        for num in numbers[1:]:
+            result -= num
+        return result
+    elif operation == "multiply":
+        result = 1
+        for num in numbers:
+            result *= num
+        return result
+    elif operation == "divide":
+        result = numbers[0]
+        for num in numbers[1:]:
+            if num == 0:
+                return "Error: Division by zero"
+            result /= num
+        return result
+    else:
+        return "Error: Unknown operation"
+
+if __name__ == "__main__":
+    numbers = []
+    for line in sys.stdin:
+        try:
+            numbers.append(float(line.strip()))
+        except ValueError:
+            print(f"Invalid input: {line.strip()}")
+            sys.exit(1)
+
+    if len(numbers) < 2:
+        print("Error: At least two numbers are required for calculations.")
+        sys.exit(1)
+
+    print("Choose an operation: add, subtract, multiply, divide")
+    operation = input().strip().lower()
+
+    result = calculate(numbers, operation)
+    print(f"Result: {result}")
+
