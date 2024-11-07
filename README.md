@@ -9,8 +9,8 @@
 ![IC](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test_math_operations.yml/badge.svg)
 
 ### 機能
-- 標準入力から読み込んだ数字を加算、減算、乗算、除算する
-- 計算の*続行、リセット、終了*は選択可能
+- 標準入力から読み込んだ数字を 加算、減算、乗算、除算 する
+- 計算の *続行、リセット、終了* は選択可能
 
 ### 前準備
 - *Ubuntu* をインストールしていない場合は *Ubuntu* をインストール  
