@@ -1,7 +1,7 @@
 # robosys 2024
 2024年 ロボットシステム学
 
-## 使用技術
+## 使用技術一覧
 <img src="https://img.shields.io/badge/-Python-yellow.svg?logo=python&style=for-the-badge">
 
 ## *plusコマンド*
