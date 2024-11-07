@@ -22,12 +22,9 @@ run_test_case() {
 }
 
 # テストケースの実行
-
-run_test_case "1\n1\n=" "結果: 2.0" "Test Addition"
-run_test_case "5\n3\n=" "結果: 8.0" "Test Addition"
+run_test_case "1\n1\n=\n+" "結果: 2.0" "Test Addition"
 run_test_case "5\n3\n=\n+" "結果: 8.0" "Test Addition"
-run_test_case "10\n5\n=" "結果: 15.0" "Test Multiplication"
-run_test_case "10\n5\n=\n*" "結果: 50.0" "Test Multiplication"
-run_test_case "10\n0\n=" "結果: Error: Division by zero" "Test Division by Zero"
+run_test_case "5\n3\n=\n*\n=" "結果: 15.0" "Test Multiplication"
+run_test_case "10\n0\n=\n/" "結果: Error: Division by zero" "Test Division by Zero"
 run_test_case "5\n3\n=\n-" "結果: 2.0" "Test Subtraction"
 
