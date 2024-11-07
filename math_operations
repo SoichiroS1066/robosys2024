@@ -28,11 +28,11 @@ def calc(nums, op):
         print("無効な入力です。もう一度「ｙ 」、「r 」、または「ｎ 」を入力してください。")
         return None  # 無効な演算子の場合は処理を停止し、再度ユーザーに選択を促す
 
-def get_numbers_from_input():
+if __name__ == "__main__":
     nums = []
     print("1行ごとに数字を入力してください (終了するには「＝」を入力してください):")
-    while True:
-        line = input().strip()  # ユーザーからの入力を待つ
+    for line in sys.stdin:  # ユーザーが「＝」を入力するまで数値を入力
+        line = line.strip()  # 改行や余分な空白を除去
         if line == "=":
             break
         try:
@@ -43,14 +43,9 @@ def get_numbers_from_input():
 
     if len(nums) < 2:  # 計算には2つ以上の数字が必要
         print("エラー: 計算には2つ以上の数字が必要です。")
-        sys.exit(1)  # プログラム終了
+        sys.exit(1)
 
-    return nums
-
-def main():
-    nums = get_numbers_from_input()
-
-    while True:
+    while True:  # ユーザーが終了を選択するまで繰り返す
         print("加算、減算、乗算、除算を選択してください: +, -, *, /")
         op = input().strip()  # 演算子を入力
 
@@ -61,11 +56,24 @@ def main():
                 continue
             elif cont in ['r', 'R']:
                 print("リセットしました")
-                nums = get_numbers_from_input()  # 数字リストをリセットして再入力
-            elif cont in ['ｎ', 'n']:
+                nums = []  # 数字リストをリセット
+                print("1行ごとに数字を入力してください (終了するには「＝」を入力してください):")
+                for line in sys.stdin:  # 新たに数値を入力
+                    line = line.strip()  # 改行や余分な空白を除去
+                    if line == "=":  # 「＝」で入力終了
+                        break
+                    try:
+                        nums.append(float(line))  # 数字をリストに追加
+                    except ValueError:  # 数字以外の入力がある場合
+                        print(f"エラー: 数字以外の入力がありました: {line}")
+                        sys.exit(1)  # プログラム終了
+                if len(nums) < 2:  # 再度計算に必要な数字数を確認
+                    print("エラー: 計算には2つ以上の数字が必要です。")
+                    sys.exit(1)  # プログラム終了
+            elif cont in ['ｎ', 'n']:  # 計算を終了
                 print("計算を終了します。")
                 break  # ループを抜けてプログラム終了
-            else:
+            else:  # 無効な入力がある場合
                 print("無効な入力です。もう一度「ｙ 」、「r 」、または「ｎ 」を入力してください。")
                 continue
         else:
@@ -83,13 +91,23 @@ def main():
                     continue  # 再度入力を要求
             elif cont in ['r', 'R']:  # 計算をリセットして新たに開始する場合
                 print("リセットしました")
-                nums = get_numbers_from_input()  # 新たに数値を入力
+                nums = []  # 数字リストをリセット
+                print("1行ごとに数字を入力してください (終了するには「＝」を入力してください):")
+                for line in sys.stdin:  # 新たに数値を入力
+                    line = line.strip()  # 改行や余分な空白を除去
+                    if line == "=":  # 「＝」で入力終了
+                        break
+                    try:
+                        nums.append(float(line))  # 数字をリストに追加
+                    except ValueError:  # 数字以外の入力がある場合
+                        print(f"エラー: 数字以外の入力がありました: {line}")
+                        sys.exit(1)  # プログラム終了
+                if len(nums) < 2:  # 再度計算に必要な数字数を確認
+                    print("エラー: 計算には2つ以上の数字が必要です。")
+                    sys.exit(1)  # プログラム終了
             elif cont in ['ｎ', 'n']:  # 計算を終了
                 print("計算を終了します。")
                 break  # ループを抜けてプログラム終了
             else:  # 無効な入力がある場合
                 print("無効な入力です。もう一度「ｙ 」、「r 」、または「ｎ 」を入力してください。")
-
-if __name__ == "__main__":
-    main()
 
