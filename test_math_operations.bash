@@ -8,8 +8,8 @@ run_test_case() {
     expected_output="$2"
     test_name="$3"
 
-    # Pythonスクリプトを実行し、出力を取得
-    result=$(echo "$input_data" | python3 math_operations)  # `math_operations` を呼び出す
+    # Pythonスクリプトを実行し、入力データを標準入力として渡す
+    result=$(echo -e "$input_data" | python3 math_operations)  # 標準入力をパイプで渡す
 
     # 結果が期待通りかを検証
     if [[ "$result" == *"$expected_output"* ]]; then
@@ -22,7 +22,12 @@ run_test_case() {
 }
 
 # テストケースの実行
-run_test_case "1 1 +" "結果: 2.0" "Test Addition"
-run_test_case "5 3 +" "結果: 8.0" "Test Addition"
-run_test_case "5 3 *" "結果: 15.0" "Test Multiplication"
+
+run_test_case "1\n1\n=" "結果: 2.0" "Test Addition"
+run_test_case "5\n3\n=" "結果: 8.0" "Test Addition"
+run_test_case "5\n3\n=\n+" "結果: 8.0" "Test Addition"
+run_test_case "10\n5\n=" "結果: 15.0" "Test Multiplication"
+run_test_case "10\n5\n=\n*" "結果: 50.0" "Test Multiplication"
+run_test_case "10\n0\n=" "結果: Error: Division by zero" "Test Division by Zero"
+run_test_case "5\n3\n=\n-" "結果: 2.0" "Test Subtraction"
 
