@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 ng () {
-    echo ${1}行目が違うよ
+    echo ${1}行目が違います
     res=1
 }
 
