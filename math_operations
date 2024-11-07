@@ -2,10 +2,6 @@
 # SPDX-FileCopyrightText: 2024 Soichiro Suzuki
 # SPDX-License-Identifier: BSD-3-Clause
 
-#numbers → nums, operation → op, additional_number → add_num, continue_calc → cont
-
-print("")
-
 import sys
 
 def calc(nums, op):
@@ -45,20 +41,19 @@ if __name__ == "__main__":
             sys.exit(1)
 
     if len(nums) < 2:
-        print("エラー: 計算には2つ以上の数字が必要です。")
+        print("エラー: 計算には少なくとも2つの数字が必要です。")
         sys.exit(1)
 
     while True:
-        print("加算、減算、乗算、除算を選択してください: +, -, *, /")
+        print("加算、減算、掛け算、割り算を選択してください: +, -, *, /")
         op = input().strip()
 
         result = calc(nums, op)
         print(f"結果: {result}")
 
         # 続けて計算を行うかどうか
-        cont = input("この計算結果に新たな計算式を追加しますか？ (ｙ/n): ").strip()
+        cont = input("計算を続けますか？  (続ける: ｙ, リセット: r, 終了: ｎ): ").strip()
 
-        # 全角半角両方の「ｙ 」または「n 」を受け入れるように修正
         if cont in ['ｙ', 'y']:
             try:
                 add_num = float(input("次の数値を入力してください: ").strip())
@@ -66,9 +61,25 @@ if __name__ == "__main__":
             except ValueError:
                 print("エラー: 有効な数値を入力してください。")
                 continue
+        elif cont in ['r', 'R']:
+            print("リセットしました")
+            nums = []  # 数字リストをリセット
+            print("1行ごとに数字を入力してください (終了するには「＝」を入力してください):")
+            for line in sys.stdin:
+                line = line.strip()
+                if line == "=":
+                    break  # 「＝」で入力終了
+                try:
+                    nums.append(float(line))  # 数字をリストに追加
+                except ValueError:
+                    print(f"エラー: 数字以外の入力がありました: {line}")
+                    sys.exit(1)
+            if len(nums) < 2:
+                print("エラー: 計算には少なくとも2つの数字が必要です。")
+                sys.exit(1)
         elif cont in ['ｎ', 'n']:
             print("計算を終了します。")
             break
         else:
-            print("無効な入力です。もう一度「ｙ」または「ｎ」を入力してください。")
+            print("無効な入力です。もう一度「ｙ」、「r」、または「ｎ」を入力してください。")
 
