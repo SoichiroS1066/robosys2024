@@ -8,16 +8,16 @@
 - 標準入力から読み込んだ数字の列を足す。
 
 ## 前準備
-- Ubuntu をインストールしていない場合はUbuntu をインストール  
+- Ubuntu をインストールしていない場合は Ubuntu をインストール  
 ※ バージョンはテスト環境と同じ *Ubuntu 24.04 LTS* をオススメします
 - Ubuntu 内にGitHub を入れていない場合は以下を入力しインストール  
 $`sudo apt install git`
 
 ## 起動の手順
 前準備が済んでいる場合は次のコードを入力  
-- GitHub からrobosys2024 のリポジトリをクローン  
+- GitHub から robosys2024 のリポジトリをクローン  
 $`git clone https://github.com/SoichiroS1066/robosys2024`  
-- robosys2024のリポジトリへ移動  
+- robosys2024 のリポジトリへ移動  
 $`cd ~/robosys2024`
 
 ## 使用例
