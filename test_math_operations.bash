@@ -8,6 +8,7 @@ run_test_case() {
     expected_output="$2"
     test_name="$3"
 
+    # 標準入力を自動化するためのエコーを使用
     # Pythonスクリプトを実行し、入力データを標準入力として渡す
     result=$(echo -e "$input_data" | python3 math_operations)  # 標準入力をパイプで渡す
 
