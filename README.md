@@ -5,6 +5,7 @@
 <img src="https://img.shields.io/badge/-Python-yellow.svg?logo=python&style=for-the-badge">
 
 ## *plusコマンド*
+![License: BSD-3](https://img.shields.io/badge/License-BSD--3--Clause-blue.svg)
 ![test](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test.yml/badge.svg)
 
 ### 機能
