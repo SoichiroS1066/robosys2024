@@ -1,20 +1,24 @@
 name: test_math_operations        # ワークフローの名前
 
-on: push          # このワークフローを push イベントで実行
+on: 
+  push:                            # pushイベントでトリガー
+    branches:
+      - main                       # mainブランチにpushされたときに実行
 
-jobs:             # 実行するジョブのリスト
-  test:           # 'test' ジョブの定義
-    runs-on: ubuntu-latest   # Ubuntu の最新バージョンで実行
-    steps:                   # 手続きのリスト
-      - uses: actions/checkout@v3  # リポジトリの内容をチェックアウト
-      - name: Set up Python  # Python のセットアップ
+jobs:                               # 実行するジョブのリスト
+  test:                             # testというジョブを作る
+    runs-on: ubuntu-latest          # ジョブが実行されるOS（Ubuntu最新版）
+    strategy:
+      matrix:                       # 複数のPythonバージョンで実行
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
+    steps:                           # 各ステップの詳細
+      - uses: actions/checkout@v3    # リポジトリのコードをチェックアウト
+      - name: Set up Python          # Pythonをセットアップ
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'  # Python のバージョンを指定（必要に応じて変更）
-      - name: Install dependencies  # 依存関係のインストール（例: pytest）
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt  # 必要なパッケージをインストール
-      - name: Run tests        # テストの実行
-        run: bash -xv ./test_math_operations.bash  # シェルスクリプトを実行
+          python-version: ${{ matrix.python-version }} # matrixで指定されたPythonバージョンを使用
+      - name: Install dependencies  # 必要な依存関係のインストール
+        run: bash -xv ./test_math_operatins.bash
+      - name: Run test_math_operations # シェルスクリプトの実行
+        run: bash -xv ./test_math_operations.bash  # `test_math_operations.bash` シェルスクリプトを実行
 
