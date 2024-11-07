@@ -2,84 +2,85 @@
 # SPDX-FileCopyrightText: 2024 Soichiro Suzuki
 # SPDX-License-Identifier: BSD-3-Clause
 
-import sys
+# nums = numbers, op = operation, cont = continue
 
-def calc(nums, op):
-    if op == "+":
-        return sum(nums)
-    elif op == "-":
+import sys  # 標準入力のためにsysモジュールをインポート
+
+def calc(nums, op):  # 計算を行う関数
+    if op == "+":  # 加算の場合
+        return sum(nums)  # 数値リストの合計を返す
+    elif op == "-":  # 減算
         result = nums[0]
-        for num in nums[1:]:
+        for num in nums[1:]:  # リストの2番目以降の数字を引き算
             result -= num
         return result
-    elif op == "*":
+    elif op == "*":  # 乗算
         result = 1
-        for num in nums:
+        for num in nums:  # リスト内の数字をすべて乗算
             result *= num
         return result
-    elif op == "/":
+    elif op == "/":  # 除算
         result = nums[0]
-        for num in nums[1:]:
-            if num == 0:
+        for num in nums[1:]:  # リストの2番目以降の数字を除算
+            if num == 0:  # ゼロで除算したらエラー
                 return "エラー: ゼロでの割り算はできません"
             result /= num
         return result
-    else:
+    else:  # その他の演算子が入力された場合
         return "エラー: 不正な演算です"
 
-if __name__ == "__main__":
-    nums = []
+if __name__ == "__main__":  # スクリプトが直接実行されたときに実行される部分
+    nums = []  # 数字を入れるリスト
     print("1行ごとに数字を入力してください (終了するには「＝」を入力してください):")
-    for line in sys.stdin:
-        line = line.strip()
-        if line == "=":
-            break  # 「＝」で入力終了
+    for line in sys.stdin:  # 標準入力から1行ずつ読み込む
+        line = line.strip()  # 改行や余分な空白を除去
+        if line == "=":  # 「＝」で入力終了
+            break
         try:
             nums.append(float(line))  # 数字をリストに追加
-        except ValueError:
+        except ValueError:  # 数字以外の入力がある場合
             print(f"エラー: 数字以外の入力がありました: {line}")
-            sys.exit(1)
+            sys.exit(1)  # プログラム終了
 
-    if len(nums) < 2:
-        print("エラー: 計算には少なくとも2つの数字が必要です。")
-        sys.exit(1)
+    if len(nums) < 2:  # 計算には2つ以上の数字が必要
+        print("エラー: 計算には2つ以上の数字が必要です。")
+        sys.exit(1)  # プログラム終了
 
-    while True:
+    while True:  # ユーザーが終了を選択するまで繰り返す
         print("加算、減算、掛け算、割り算を選択してください: +, -, *, /")
-        op = input().strip()
+        op = input().strip()  # 演算子を入力
 
-        result = calc(nums, op)
-        print(f"結果: {result}")
+        result = calc(nums, op)  # 計算実行
+        print(f"結果: {result}")  # 結果表示
 
-        # 続けて計算を行うかどうか
-        cont = input("計算を続けますか？  (続ける: ｙ, リセット: r, 終了: ｎ): ").strip()
+        # 「計算続行 or リセットor 終了」を選択
+        cont = input("計算式を続けますか？ 結果をリセットして新たに計算しますか？ (続ける: ｙ, リセット: r, 終了: ｎ): ").strip()
 
-        if cont in ['ｙ', 'y']:
+        if cont in ['ｙ', 'y']:  # 計算を続ける場合
             try:
-                add_num = float(input("次の数値を入力してください: ").strip())
-                nums = [result, add_num]  # 前回の計算結果と新しい数値を使って計算を続ける
-            except ValueError:
+                add_num = float(input("次の数値を入力してください: ").strip())  # 次の数値を入力
+                nums = [result, add_num]  # 前回の結果と新しい数値で計算を続行
+            except ValueError:  # 数字以外の入力がある場合
                 print("エラー: 有効な数値を入力してください。")
-                continue
-        elif cont in ['r', 'R']:
-            print("リセットしました")
+                continue  # 再度入力を要求
+        elif cont in ['r', 'R']:  # 計算をリセットして新たに開始する場合
+            print("計算をリセットします。新しい計算を開始します。")
             nums = []  # 数字リストをリセット
             print("1行ごとに数字を入力してください (終了するには「＝」を入力してください):")
-            for line in sys.stdin:
-                line = line.strip()
-                if line == "=":
-                    break  # 「＝」で入力終了
+            for line in sys.stdin:  # 新たに数値を入力
+                line = line.strip()  # 改行や余分な空白を除去
+                if line == "=":  # 「＝」で入力終了
+                    break
                 try:
                     nums.append(float(line))  # 数字をリストに追加
-                except ValueError:
+                except ValueError:  # 数字以外の入力がある場合
                     print(f"エラー: 数字以外の入力がありました: {line}")
-                    sys.exit(1)
-            if len(nums) < 2:
-                print("エラー: 計算には少なくとも2つの数字が必要です。")
-                sys.exit(1)
-        elif cont in ['ｎ', 'n']:
+                    sys.exit(1)  # プログラム終了
+            if len(nums) < 2:  # 再度計算に必要な数字数を確認
+                print("エラー: 計算には2つ以上の数字が必要です。")
+                sys.exit(1)  # プログラム終了
+        elif cont in ['ｎ', 'n']:  # 計算を終了
             print("計算を終了します。")
-            break
-        else:
-            print("無効な入力です。もう一度「ｙ」、「r」、または「ｎ」を入力してください。")
-
+            break  # ループを抜けてプログラム終了
+        else:  # 無効な入力がある場合
+            print("無効な入力です。もう一度「ｙ 」、「r 」、または「ｎ 」を入力してください。")
