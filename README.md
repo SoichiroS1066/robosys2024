@@ -23,7 +23,7 @@ $`sudo apt install git`
 $`git clone https://github.com/SoichiroS1066/robosys2024`  
 - *robosys2024* のディレクトリへ移動  
 $`cd ~/robosys2024`
-- *math_operations* を実行
+- *math_operations* を実行  
 $`./math_operations`
 
 ### 使用例
