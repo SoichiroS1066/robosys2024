@@ -4,12 +4,12 @@
 ## 使用技術一覧
 <img src="https://img.shields.io/badge/-Python-yellow.svg?logo=python&style=for-the-badge">
 
-## *plusコマンド*
+## *math_operations*
 [![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-![test](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test.yml/badge.svg)
+![test](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test_math_operations.yml/badge.svg)
 
 ### 機能
-- 標準入力から読み込んだ数字の列を足す
+- 標準入力から読み込んだ数字を加算、減算、乗算、除算する
 
 ### 前準備
 - *Ubuntu* をインストールしていない場合は *Ubuntu* をインストール  
@@ -23,9 +23,11 @@ $`sudo apt install git`
 $`git clone https://github.com/SoichiroS1066/robosys2024`  
 - *robosys2024* のディレクトリへ移動  
 $`cd ~/robosys2024`
+- *math_operations* を実行
+$`./math_operations`
 
 ### 使用例
-- 1~5 を足したい場合  
+- 1 + 2 をしたい場合  
 $`seq 1 5 | ./plus` または $`seq 5 | ./plus`
 - 5~100 を足したい場合  
 $`seq 5 100 | ./plus`
