@@ -5,7 +5,7 @@
 ![test](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test.yml/badge.svg)
 
 ### 機能
-- 標準入力から読み込んだ数字の列を足す。
+- 標準入力から読み込んだ数字の列を足す
 
 ### 前準備
 - *Ubuntu* をインストールしていない場合は *Ubuntu* をインストール  
