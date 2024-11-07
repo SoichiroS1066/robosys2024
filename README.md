@@ -1,7 +1,7 @@
 # robosys 2024
 2024年 ロボットシステム学
 
-# *plusコマンド*
+# **plusコマンド**
 ![test](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test.yml/badge.svg)
 
 ### 機能
