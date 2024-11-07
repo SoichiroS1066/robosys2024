@@ -1,7 +1,10 @@
 # robosys 2024
 2024年 ロボットシステム学
 
-# *plusコマンド*
+## 使用技術
+<img src="https://img.shields.io/badge/-{言語、フレームワーク名など}-{シールドのカラーコード}.svg?logo=next.js&style={バッチのスタイル}&logoColor={ロゴのカラーコード}">
+
+## *plusコマンド*
 ![test](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test.yml/badge.svg)
 
 ### 機能
