@@ -2,28 +2,26 @@
 # SPDX-FileCopyrightText: 2024 Soichiro Suzuki
 # SPDX-License-Identifier: BSD-3-Clause
 
-#!/usr/bin/python3
-# SPDX-FileCopyrightText: 2024 Soichiro Suzuki
-# SPDX-License-Identifier: BSD-3-Clause
+#numbers → nums, operation → op, additional_number → add_num, continue_calc → cont
 
 import sys
 
-def calculate(numbers, operation):
-    if operation == "+":
-        return sum(numbers)
-    elif operation == "-":
-        result = numbers[0]
-        for num in numbers[1:]:
+def calc(nums, op):
+    if op == "+":
+        return sum(nums)
+    elif op == "-":
+        result = nums[0]
+        for num in nums[1:]:
             result -= num
         return result
-    elif operation == "*":
+    elif op == "*":
         result = 1
-        for num in numbers:
+        for num in nums:
             result *= num
         return result
-    elif operation == "/":
-        result = numbers[0]
-        for num in numbers[1:]:
+    elif op == "/":
+        result = nums[0]
+        for num in nums[1:]:
             if num == 0:
                 return "エラー: ゼロでの割り算はできません"
             result /= num
@@ -32,26 +30,43 @@ def calculate(numbers, operation):
         return "エラー: 不正な演算です"
 
 if __name__ == "__main__":
-    numbers = []
+    nums = []
     print("1行ごとに数字を入力してください (終了するには「＝」を入力してください):")
     for line in sys.stdin:
         line = line.strip()
         if line == "=":
             break  # 「＝」で入力終了
         try:
-            numbers.append(float(line))  # 数字をリストに追加
+            nums.append(float(line))  # 数字をリストに追加
         except ValueError:
             print(f"エラー: 数字以外の入力がありました: {line}")
             sys.exit(1)
 
-    if len(numbers) < 2:
+    if len(nums) < 2:
         print("エラー: 計算には少なくとも2つの数字が必要です。")
         sys.exit(1)
 
-    print("加算、減算、掛け算、割り算を選択してください: +, -, *, /")
-    operation = input().strip()
+    while True:
+        print("加算、減算、掛け算、割り算を選択してください: +, -, *, /")
+        op = input().strip()
 
-    result = calculate(numbers, operation)
-    print(f"結果: {result}")
+        result = calc(nums, op)
+        print(f"結果: {result}")
 
+        # 続けて計算を行うかどうか
+        cont = input("この計算結果に新たな計算式を追加しますか？ (ｙ/n): ").strip()
+
+        # 全角半角両方の「ｙ」または「n」を受け入れるように修正
+        if cont in ['ｙ', 'y']:
+            try:
+                add_num = float(input("次の数値を入力してください: ").strip())
+                nums = [result, add_num]  # 前回の計算結果と新しい数値を使って計算を続ける
+            except ValueError:
+                print("エラー: 有効な数値を入力してください。")
+                continue
+        elif cont in ['ｎ', 'n']:
+            print("計算を終了します。")
+            break
+        else:
+            print("無効な入力です。もう一度「ｙ」または「ｎ」を入力してください。")
 
