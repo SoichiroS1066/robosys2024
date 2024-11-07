@@ -2,7 +2,7 @@
 2024年 ロボットシステム学
 
 ## 使用技術
-![アイコン](https://img.shields.io/badge/-Python-yellow.svg?logo=python&style=for-the-badge)
+<img src="https://img.shields.io/badge/-Python-yellow.svg?logo=python&style=for-the-badge">
 
 ## *plusコマンド*
 ![test](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test.yml/badge.svg)
