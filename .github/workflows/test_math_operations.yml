@@ -1,24 +1,22 @@
-name: test_math_operations        # ワークフローの名前
+name: test_math_operations
 
-on: 
-  push:                            # pushイベントでトリガー
+on:
+  push:
     branches:
-      - main                       # mainブランチにpushされたときに実行
+      - main  # mainブランチへのpushで実行
 
-jobs:                               # 実行するジョブのリスト
-  test:                             # testというジョブを作る
-    runs-on: ubuntu-latest          # ジョブが実行されるOS（Ubuntu最新版）
+jobs:
+  test:
+    runs-on: ubuntu-latest  # ジョブをUbuntu環境で実行
     strategy:
-      matrix:                       # 複数のPythonバージョンで実行
-        python-version: ["3.7", "3.8", "3.9", "3.10"]
-    steps:                           # 各ステップの詳細
-      - uses: actions/checkout@v3    # リポジトリのコードをチェックアウト
-      - name: Set up Python          # Pythonをセットアップ
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10"]  # 複数のPythonバージョンで実行
+    steps:
+      - uses: actions/checkout@v3  # リポジトリのコードをチェックアウト
+      - name: Set up Python  # Pythonをセットアップ
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }} # matrixで指定されたPythonバージョンを使用
-      - name: Install dependencies  # 必要な依存関係のインストール
-        run: bash -xv ./test_math_operatins.bash
-      - name: Run test_math_operations # シェルスクリプトの実行
-        run: bash -xv ./test_math_operations.bash  # `test_math_operations.bash` シェルスクリプトを実行
+          python-version: ${{ matrix.python-version }}  # matrixで指定されたPythonバージョンを使用
+      - name: Run test_math_operations  # シェルスクリプトの実行
+        run: bash -xv ./test_math_operations.bash  # `test_math_operations.bash` を実行
 
