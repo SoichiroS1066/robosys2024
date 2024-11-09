@@ -12,18 +12,18 @@
 - 標準入力から読み込んだ*数字の列を足し算*する
 
 ### 前準備
-- *Ubuntu* をインストールしていない場合は *Ubuntu* をインストール  
+① *Ubuntu* をインストールしていない場合は *Ubuntu* をインストール  
 ※ バージョンはテスト環境と同じ *Ubuntu 24.04 LTS* をオススメします
-- *Ubuntu* 内に*GitHub* を入れていない場合は以下を入力しインストール  
+② *Ubuntu* 内に*GitHub* を入れていない場合は以下を入力しインストール  
 $`sudo apt install git`
 
 ### 起動の手順
 前準備が済んでいる場合は次のコードを入力  
-- *GitHub* から *robosys2024* のリポジトリをクローン  
+① *GitHub* から *robosys2024* のリポジトリをクローン  
 $`git clone https://github.com/SoichiroS1066/robosys2024`  
-- *robosys2024* のディレクトリへ移動  
+② *robosys2024* のディレクトリへ移動  
 $`cd ~/robosys2024`
-- *plus* を実行  
+③ *plus* を実行  
 
 ### 使用例
 - 1 ~ 5 を足し算したい場合  
