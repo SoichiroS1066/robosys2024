@@ -4,8 +4,6 @@
 
 import sys
 
-print("その月が何日まであるかをお答えします。")
-
 def get_days_in_month(year, month):
     # うるう年の処理
     if month == 2:
@@ -26,16 +24,14 @@ try:
     year = int(input())  # プロンプトなしで年を入力
     month = int(input())  # プロンプトなしで月を入力
 except ValueError:
-    print("無効な入力です。数字を入力してください。")
     exit(1)
 
 if month < 1 or month > 12:
-    print("存在しない月です。1～12 の間で入力してください。")
     exit(1)
 
 # 月の日数を取得して出力
 days = get_days_in_month(year, month)
 if days:
-    print(f"{year}年{month}月は{days}日まであります。")
+    print(f"1~{days}")
 else:
     print("無効な入力です。")
