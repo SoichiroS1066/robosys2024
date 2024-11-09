@@ -23,12 +23,12 @@ month_days
 西暦と月を入力するとその月が何日まであるかを教えてくれる
 
 ## 使い方
-先述したmonth_daysを実行する  
+先述した month_days を実行する  
 `$ ./month_days`  
 　　　　↓  
-　西暦を入力しEnter  
+　西暦を入力し *Enter*  
 　　　　↓  
-　月を入力しEnter
+　月を入力し *Enter*
 
   
 実行結果例は以下のようになります
