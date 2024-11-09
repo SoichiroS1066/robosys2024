@@ -21,8 +21,8 @@ def get_days_in_month(year, month):
 
 # ユーザーから年と月を入力してもらう
 try:
-    year = int(input(": "))  # 年の入力を促す
-    month = int(input(": "))  # 月の入力を促す
+    year = int(input())  # 年の入力を促す
+    month = int(input())  # 月の入力を促す
 except ValueError:
     exit(1)
 
