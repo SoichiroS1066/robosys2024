@@ -21,5 +21,5 @@ jobs:
         python-version: ${{ matrix.python-version }}  # matrixで指定されたバージョンを使用
 
     - name: Run month_days.py tests  # month_days.py のテストを実行
-      run: bash -xv ./test_month_days.bash  # test_month_days.bash スクリプトを実行
+      run: bash -xv ./robosys2024/kadai1/test_month_days.bash
 
