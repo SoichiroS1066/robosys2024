@@ -16,10 +16,10 @@ jobs:
     - uses: actions/checkout@v3  # リポジトリのコードをクローン
 
     - name: Set up Python  # Pythonのセットアップ
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}  # matrixで指定されたバージョンを使用
 
     - name: Run month_days.py tests  # month_days.py のテストを実行
-      run: bash -xv ./kadai1/test_month_days.bash
+      run: bash -xv ./kadai1/test_month_days.bash  # kadai1 ディレクトリ内の bash スクリプトを実行
 
