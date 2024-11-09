@@ -21,7 +21,7 @@ $`sudo apt install git`
 - *GitHub* から *robosys2024* のリポジトリをクローン  
 $`git clone https://github.com/SoichiroS1066/robosys2024/`  
 - *kadai1* のディレクトリへ移動  
-$`cd ~/robosys2024/kadai1`  
+$`cd ~/robosys2024/kadai1/`  
 - *month_days* を実行  
 
 ### 使用例
