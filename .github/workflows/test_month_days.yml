@@ -20,6 +20,5 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}  # matrixで指定されたバージョンを使用
 
-    - name: Run month_days.py tests  # month_days.py のテストを実行
-      run: bash -xv ./kadai1/test_month_days.bash  # kadai1 ディレクトリ内の bash スクリプトを実行
-
+    - name: Run month_days.bash tests  # month_days.bash のテストを実行
+      run: bash -xv ./kadai1/math_days.bash  # kadai1 ディレクトリ内の bash スクリプトを実行
