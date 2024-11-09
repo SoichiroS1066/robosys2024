@@ -2,13 +2,13 @@
 [![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 ![IC](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test_month_days.yml/badge.svg)
 
-こちらは、2024年度 千葉工業大学先進工学部未来ロボティクス学科2年後期のロボットシステム学の課題1用のリポジトリです
+こちらは、2024年度 千葉工業大学先進工学部未来ロボティクス学科2年後期のロボットシステム学の課題1用のリポジトリです。
 
 ## 使用技術一覧
 <img src="https://img.shields.io/badge/-Python-yellow.svg?logo=python&style=for-the-badge">
 
 ## リポジトリの概要
-month_days
+month_days.py
 - 西暦とを入力するとその月が何日まであるかを教えてくれる
 
 
@@ -19,13 +19,13 @@ month_days
 - *kadai1* のディレクトリへ移動  
 `$ cd ~/robosys2024/kadai1/`
 
-## *month_days*
+## *month_days.py*
 
 ## 機能
 西暦と月を入力するとその月が何日まであるかを教えてくれる
 
 ## 使い方
-先述した month_days を実行する  
+先述した month_days.py を実行する  
 `$ ./month_days`  
 　　　　↓  
 　西暦を入力し *Enter*  
@@ -50,5 +50,5 @@ $ ./month_days.py
 - *Python 3.7 ~ 3.10*
 
 # ライセンス等
-- このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
+- このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
 - © 2024 Soichiro Suzuki
