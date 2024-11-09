@@ -1,4 +1,4 @@
-name: Run Tests
+name: test_month_days
 
 on:
   push:
