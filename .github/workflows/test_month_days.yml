@@ -1,0 +1,25 @@
+name: Test Month Days
+
+on: 
+  push:
+    branches:
+      - main  # mainブランチにpushされた時にワークフローが実行される
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Ubuntu最新の環境で実行
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10"]  # Pythonのバージョンを複数指定（テスト用）
+
+    steps:
+    - uses: actions/checkout@v3  # リポジトリのコードをクローン
+
+    - name: Set up Python  # Pythonのセットアップ
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}  # matrixで指定されたバージョンを使用
+
+    - name: Run month_days.py tests  # month_days.py のテストを実行
+      run: bash -xv ./test_month_days.bash  # test_month_days.bash スクリプトを実行
+
