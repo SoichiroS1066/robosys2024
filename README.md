@@ -1,5 +1,11 @@
 # robosys 2024
-2024年 ロボットシステム学
+こちらは、2024年度 千葉工業大学先進工学部未来ロボティクス学科2年後期のロボットシステム学で使用しているリポジトリです。
+
+## リポジトリ概要
+plus  
+- lesson_7まで使用した標準入力を用いた簡易計算コマンド  
+test.bash
+- lesson_6で作成したテストコマンド
 
 ## 使用技術一覧
 <img src="https://img.shields.io/badge/-Python-yellow.svg?logo=python&style=for-the-badge">
@@ -9,7 +15,7 @@
 ![IC](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test.yml/badge.svg)
 
 ### 機能
-- 標準入力から読み込んだ*数字の列を足し算*する
+- 標準入力から読み込んだ*数字を1~xの列として足し算*をします。
 
 ### 前準備
 - *Ubuntu* をインストールしていない場合は *Ubuntu* をインストール  
