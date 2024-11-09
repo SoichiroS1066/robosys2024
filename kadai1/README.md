@@ -11,6 +11,7 @@ month_days
 ## リポジトリの使用方法
 - *GitHub* から *robosys2024* のリポジトリをクローン  
 `$ git clone https://github.com/SoichiroS1066/robosys2024/`  
+  
 - *kadai1* のディレクトリへ移動  
 `$ cd ~/robosys2024/kadai1/`
 
@@ -24,7 +25,12 @@ month_days
 ## 使い方
 先述したmonth_daysを実行する  
 `$ ./month_days` 
+　　　　↓  
+　西暦を入力しEnter  
+　　　　↓  
+　月を入力しEnter
 
+  
 実行結果例は以下のようになります
 ```
 $ ./month_days.py
