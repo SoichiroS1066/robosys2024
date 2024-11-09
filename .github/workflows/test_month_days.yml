@@ -1,25 +1,21 @@
-name: Test Month Days
+name: Run Tests
 
-on: 
+on:
   push:
     branches:
-      - main  # mainブランチにpushされた時にワークフローが実行される
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Ubuntu最新の環境で実行
-    strategy:
-      matrix:
-        python-version: ["3.7", "3.8", "3.9", "3.10"]  # Pythonのバージョンを複数指定（テスト用）
+    runs-on: ubuntu-latest  # Ubuntu 環境で実行
 
     steps:
-    - uses: actions/checkout@v3  # リポジトリのコードをクローン
+    - name: Checkout repository
+      uses: actions/checkout@v3  # リポジトリをクローン
 
-    - name: Set up Python  # Pythonのセットアップ
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}  # matrixで指定されたバージョンを使用
-
-    - name: Run month_days.bash tests  # month_days.bash のテストを実行
-      run: bash -xv ./kadai1/month_days.bash  # kadai1 ディレクトリ内の bash スクリプトを実行
-
+    - name: Run tests
+      run: |
+        bash -xv ./kadai1/month_days.bash  # テストを実行するコマンド
