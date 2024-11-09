@@ -1,4 +1,5 @@
 # kadai1
+こちらは、2024年度 千葉工業大学先進工学部未来ロボティクス学科2年後期のロボットシステム学の課題1用のリポジトリです
 
 ## 使用技術一覧
 <img src="https://img.shields.io/badge/-Python-yellow.svg?logo=python&style=for-the-badge">
