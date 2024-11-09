@@ -13,19 +13,19 @@ res=0
 out=$(echo -e "2024\n2" | ./kadai1/month_days.py)  # 正常な年と月の入力
 expected="2024年2月は29日まであります。"  # うるう年2月
 # 出力の最初のメッセージを無視して、日数部分のみを比較
-actual=$(echo "$out" | grep -oP '\d{4}年\d{1,2}月は\d{1,2}日まであります。')
+actual=$(echo "$out" | grep -oP '\d{4}年\d{1,2}月は\d{1,2}日まであります。' | tr -d '\n\r')
 [ "${actual}" = "${expected}" ] || ng "$LINENO"
 
 out=$(echo -e "2023\n2" | ./kadai1/month_days.py)  # 正常な年と月の入力（うるう年ではない）
 expected="2023年2月は28日まであります。"  # 通常の2月
 # 出力の最初のメッセージを無視して、日数部分のみを比較
-actual=$(echo "$out" | grep -oP '\d{4}年\d{1,2}月は\d{1,2}日まであります。')
+actual=$(echo "$out" | grep -oP '\d{4}年\d{1,2}月は\d{1,2}日まであります。' | tr -d '\n\r')
 [ "${actual}" = "${expected}" ] || ng "$LINENO"
 
 out=$(echo -e "2024\n12" | ./kadai1/month_days.py)  # 正常な年と月の入力（12月）
 expected="2024年12月は31日まであります。"  # 12月
 # 出力の最初のメッセージを無視して、日数部分のみを比較
-actual=$(echo "$out" | grep -oP '\d{4}年\d{1,2}月は\d{1,2}日まであります。')
+actual=$(echo "$out" | grep -oP '\d{4}年\d{1,2}月は\d{1,2}日まであります。' | tr -d '\n\r')
 [ "${actual}" = "${expected}" ] || ng "$LINENO"
 
 ### 誤った入力 ###
