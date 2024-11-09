@@ -4,13 +4,12 @@
 ## 使用技術一覧
 <img src="https://img.shields.io/badge/-Python-yellow.svg?logo=python&style=for-the-badge">
 
-## *math_operations*
+## *plus コマンド*
 [![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-![IC](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test_math_operations.yml/badge.svg)
+![IC](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test.yml/badge.svg)
 
 ### 機能
-- 標準入力から読み込んだ数字を 加算、減算、乗算、除算 する
-- 計算の *続行、リセット、終了* は選択可能
+- 標準入力から読み込んだ*数字の列を足し算*する
 
 ### 前準備
 - *Ubuntu* をインストールしていない場合は *Ubuntu* をインストール  
@@ -24,23 +23,14 @@ $`sudo apt install git`
 $`git clone https://github.com/SoichiroS1066/robosys2024`  
 - *robosys2024* のディレクトリへ移動  
 $`cd ~/robosys2024`
-- *math_operations* を実行  
-$`./math_operations`
+- *plus* を実行  
+$`./plus`
 
 ### 使用例
-- 1 + 2 をしたい場合  
-$`./math_operations`  
-1行ごとに数字を入力してください (終了するには「＝」を入力してください):  
-`1`  
-`2`  
-`=`  
-加算、減算、乗算、除算を選択してください: +, -, *, /  
-`+`  
-結果: 3.0
-
-- 計算を終了したい場合  
-計算を続けますか？ (続行: ｙ, リセット: r, 終了: ｎ): `n`  
-計算を終了します。
+- 1 ~ 5 を足し算したい場合  
+$`./plus` 
+`1 5`    
+15
 
 ### 必要なソフトウェア
 - *Python*  
