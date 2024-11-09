@@ -24,7 +24,7 @@ month_days
 
 ## 使い方
 先述したmonth_daysを実行する  
-`$ ./month_days` 
+`$ ./month_days`  
 　　　　↓  
 　西暦を入力しEnter  
 　　　　↓  
