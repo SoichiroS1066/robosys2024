@@ -4,7 +4,7 @@
 
 import sys
 
-print("うるう年かどうかをお答えします。")
+print("その月が何日まであるかをお答えします。")
 
 def is_leap_year(year):
 
