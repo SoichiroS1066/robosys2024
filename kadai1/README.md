@@ -1,11 +1,16 @@
-# Month_days
+# kadai1
 
-## 使用技術一覧
+### 使用技術一覧
 <img src="https://img.shields.io/badge/-Python-yellow.svg?logo=python&style=for-the-badge">
 
-## *math_operations*
+## *month_days*
 [![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 ![IC](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test_math_operations.yml/badge.svg)
+
+## リポジトリの概要
+month_days
+- 西暦とを入力するとその月が何日まであるかを教えてくれる
+
 
 ### リポジトリの使用方法
 - *GitHub* から *robosys2024* のリポジトリをクローン  
@@ -13,7 +18,7 @@
 - *kadai1* のディレクトリへ移動  
 `$ cd ~/robosys2024/kadai1/`
 
-### month_days
+## month_days
 ### 機能
 西暦と月を入力するとその月が何日まであるかを教えてくれる
 
