@@ -24,7 +24,6 @@ $`git clone https://github.com/SoichiroS1066/robosys2024`
 - *robosys2024* のディレクトリへ移動  
 $`cd ~/robosys2024`
 - *plus* を実行  
-$`./plus`
 
 ### 使用例
 - 1 ~ 5 を足し算したい場合  
