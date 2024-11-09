@@ -1,4 +1,7 @@
 # kadai1
+[![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+![IC](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test_month_days.yml/badge.svg)
+
 こちらは、2024年度 千葉工業大学先進工学部未来ロボティクス学科2年後期のロボットシステム学の課題1用のリポジトリです
 
 ## 使用技術一覧
@@ -17,8 +20,6 @@ month_days
 `$ cd ~/robosys2024/kadai1/`
 
 ## *month_days*
-[![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-![IC](https://github.com/SoichiroS1066/robosys2024/actions/workflows/test_month_days.yml/badge.svg)
 
 ## 機能
 西暦と月を入力するとその月が何日まであるかを教えてくれる
