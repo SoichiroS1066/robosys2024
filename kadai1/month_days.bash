@@ -30,26 +30,30 @@ actual=$(echo "$out" | grep -oP '\d{4}年\d{1,2}月は\d{1,2}日までありま�
 
 ### 誤った入力 ###
 out=$(echo -e "abc\n2" | ./kadai1/month_days.py)  # 年に文字列を入力
-expected="無効な入力です。数字を入力してください。"
+expected="無効な入力です。数字を入力してください。"  # エラーメッセージ
+# 出力にエラーメッセージが含まれることを確認
+[[ "$out" == *"$expected"* ]] || ng "$LINENO"
 # 異常終了ステータスが1であることを確認
 [ "$?" = 1 ] || ng "$LINENO"
-# 出力が空であることを確認
-[ "${out}" = "" ] || ng "$LINENO"
 
 out=$(echo -e "2024\n13" | ./kadai1/month_days.py)  # 月に無効な値を入力（13月）
-expected="存在しない月です。1～12 の間で入力してください。"
+expected="存在しない月です。1～12 の間で入力してください。"  # エラーメッセージ
+# 出力にエラーメッセージが含まれることを確認
+[[ "$out" == *"$expected"* ]] || ng "$LINENO"
 # 異常終了ステータスが1であることを確認
 [ "$?" = 1 ] || ng "$LINENO"
-# 出力が空であることを確認
-[ "${out}" = "" ] || ng "$LINENO"
 
 out=$(echo -e "2024\n" | ./kadai1/month_days.py)  # 月を入力しない
-expected="無効な入力です。数字を入力してください。"
+expected="無効な入力です。数字を入力してください。"  # エラーメッセージ
+# 出力にエラーメッセージが含まれることを確認
+[[ "$out" == *"$expected"* ]] || ng "$LINENO"
 # 異常終了ステータスが1であることを確認
 [ "$?" = 1 ] || ng "$LINENO"
-# 出力が空であることを確認
-[ "${out}" = "" ] || ng "$LINENO"
 
-[ "$res" = 0 ] && echo OK
+# 最後にOKを表示する
+if [ "$res" -eq 0 ]; then
+    echo "OK"
+fi
+
 exit $res
 
