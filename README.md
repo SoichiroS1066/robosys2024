@@ -4,6 +4,7 @@
 ## リポジトリ概要  
 plus  
 - lesson_7まで使用した標準入力を用いたコマンド  
+
 test.bash  
 - lesson_6で作成したテストコマンド
 
@@ -20,6 +21,7 @@ test.bash
 ### 前準備
 - *Ubuntu* をインストールしていない場合は *Ubuntu* をインストール  
 ※ バージョンはテスト環境と同じ *Ubuntu 24.04 LTS* をオススメします  
+
 - *Ubuntu* 内に*GitHub* を入れていない場合は以下を入力しインストール  
 $`sudo apt install git`
 
@@ -27,8 +29,10 @@ $`sudo apt install git`
 前準備が済んでいる場合は次のコードを入力  
 - *GitHub* から *robosys2024* のリポジトリをクローン  
 $`git clone https://github.com/SoichiroS1066/robosys2024`  
+
 - *robosys2024* のディレクトリへ移動  
 $`cd ~/robosys2024`  
+
 - *plus* を実行  
 
 ### 使用例
