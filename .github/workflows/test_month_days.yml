@@ -11,6 +11,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest  # Ubuntu 環境で実行
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
 
     steps:
     - name: Checkout repository
