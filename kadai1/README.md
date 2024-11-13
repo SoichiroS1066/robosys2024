@@ -26,7 +26,7 @@ month_days.py
 
 ## 使い方
 先述した month_days.py を実行する  
-`$ ./month_days`  
+`$ ./month_days.py`  
 　　　　↓  
 　西暦を入力し *Enter*  
 　　　　↓  
