@@ -28,7 +28,7 @@ $ cd ~/robosys2024/kadai1/
 西暦と月を入力するとその月が何日まであるかを教えてくれる
 
 ## 使い方
-先述した month_days.py を実行する  
+- 先述した month_days.py を実行する  
   
 `$ ./month_days.py`  
 　　　　↓  
@@ -36,7 +36,7 @@ $ cd ~/robosys2024/kadai1/
 　　　　↓  
 　月を入力し *Enter*  
   
-実行結果例は以下のようになります
+- 実行例
 ```
 $ ./month_days.py
 2024
