@@ -52,6 +52,6 @@ $ ./month_days.py
 - *Ubuntu 24.04.1 LTS*
 - *Python 3.7 ~ 3.10*
 
-# ライセンス等
+# LICENSE
 - このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
 - © 2024 Soichiro Suzuki
