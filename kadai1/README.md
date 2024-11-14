@@ -30,7 +30,7 @@ $ cd ~/robosys2024/kadai1/
 ## 使い方
 先述した month_days.py を実行する  
   
-`$ ./month_days.py`
+`$ ./month_days.py`  
 　　　　↓  
 　西暦を入力し *Enter*  
 　　　　↓  
